@@ -12,3 +12,10 @@ judges<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/2018-02-figure-
 aspects<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/judged-aspects.csv')
 performances<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/performances.csv')
 judge.scores<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/judge-scores.csv')
+
+nation_performance <- performances %>%
++ filter(nation=="USA")
+final.test<-ggplot(data = nation_performance, mapping = aes(x = rank, y = ))+ 
+  geom_histogram(fill='green', color='green')+
+  labs(x='US Rankings')
+ggsave('final.test.pdf',plot=final.test,width=6,height=6)

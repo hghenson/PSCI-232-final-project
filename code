@@ -1,0 +1,14 @@
+#hg final project
+#draft of 3.7.22
+#ideally this will visualize figure skating data in different 
+#nations around the world
+#comparing the amount of money spent on their programs
+#to the sucess they reach in international competitions
+
+library(tidyverse)
+library(ggplot2)
+
+judges<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/2018-02-figure-skating-analysis/master/data/processed/judges.csv')
+aspects<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/judged-aspects.csv')
+performances<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/performances.csv')
+judge.scores<-read.csv('https://raw.githubusercontent.com/BuzzFeedNews/figure-skating-scores/master/data/tidy/judge-scores.csv')
